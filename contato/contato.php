@@ -20,7 +20,7 @@
     <div class="row">
         <fieldset>
             <legend style="display: block; padding-left: 2px; padding-right: 2px; border: none; text-align:center;">Contato</legend>
-        <form class="span7 text-center col-md-5 col-md-offset-1" style="float: none; margin-left: auto;margin-right: auto;">
+        <form class="span7 text-center col-md-5 col-md-offset-1" style="float: none; margin-left: auto;margin-right: auto;" method="get" action="mensagem_retorno.php">
             <label for="inputEmail" class="sr-only">Email</label>
             <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus style="width:500px;"></br>
             <label for="inputPassword" class="sr-only">Nome</label>
