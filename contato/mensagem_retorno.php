@@ -1,17 +1,19 @@
 <meta charset="utf-8">
 <?php
-$email = $_GET['inputEmail'];
-$nome = $_GET['inputNome'];
-$assunto = $_GET['inputAssunto'];
-$texto = $_GET['inputtextarea'];
+
+if(isset($_GET['mensagem'])){
+$email = $_GET["inputemail"];
+$nome = $_GET["inputNome"];
+$assunto = $_GET["inputAssunto"];
+$textoarea = $_GET["inputtext"];
 
 echo "Dados enviados com sucesso, abaixo seguem os dados que você enviou!<br><br>";
-
 echo "Seu email: $email<br>";
 echo "Seu Nome: $nome<br>";
 echo "Seu Assunto: $assunto<br>";
-echo "Seu texto: $texto";
-
-
+echo "Seu cometario: $textoarea<br>";
+}else{
+    echo "não deu certo";
+}
 
 ?>
