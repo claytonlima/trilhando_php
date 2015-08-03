@@ -18,7 +18,7 @@
 
 
 <div class="container">
-    <?php require_once($_GET['dados']); ?>
+
     <?php require_once("elements/menu.php") ?>
     <div class="jumbotron">
 
