@@ -21,7 +21,7 @@
 
     <?php require_once("elements/menu.php") ?>
     <div class="jumbotron">
-
+        <h2 align="center">Home</h2>
 
 
     </div>
