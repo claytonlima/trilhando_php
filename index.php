@@ -1,10 +1,3 @@
-<?php
-$rota = parse_url("http://".$_SERVER['HTTP-HOST'].$_SERVER['REQUEST_URI']);
-print_r($rota);
-$path = str_replace("/","",$rota['path']);
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
