@@ -25,7 +25,6 @@
     </div>
 
     <div class="jumbotron">
-    <?php require_once($path.".php");?>
     </div>
 
 
