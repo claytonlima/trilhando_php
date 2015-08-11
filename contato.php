@@ -14,7 +14,7 @@
     <![endif]-->
 </head>
 <body>
-<?php include("/elements/menu.php");?>
+<?php include("elements/menu.php");?>
 <div class="container">
     <h2 class="form-signin-heading">Contato</h2>
     <div class="row">
@@ -31,7 +31,7 @@
     </div>
 </div>
 </div>
-<?php include("/elements/footer.php");?>
+<?php include("elements/footer.php");?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="bootstrap3/js/bootstrap.min.js"></script>
 </body>

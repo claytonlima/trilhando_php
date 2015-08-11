@@ -19,13 +19,13 @@
 
 <div class="container">
 
-    <?php require_once("/elements/menu.php") ?>
+    <?php require_once("elements/menu.php") ?>
     <div class="jumbotron">
         <h3 align="center">Serviços</h3>
 
 
     </div>
-    <?php require_once("/elements/footer.php") ?>
+    <?php require_once("elements/footer.php") ?>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
