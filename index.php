@@ -1,6 +1,5 @@
 <?php
-$_SERVER["QUERY_STRING"];
-
+include ("routas.php");
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +28,8 @@ $_SERVER["QUERY_STRING"];
         <h2 align="center">Home</h2>
     </div>
 
-    <div class="jumbotron">
+    <div>
+        <?php include(rotas());?>
     </div>
 
 
