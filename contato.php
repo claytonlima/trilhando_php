@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Trilhando o PHP</title>
-    <link href="../bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -14,7 +14,7 @@
     <![endif]-->
 </head>
 <body>
-<?php include("../elements/menu.php");?>
+<?php include("/elements/menu.php");?>
 <div class="container">
     <h2 class="form-signin-heading">Contato</h2>
     <div class="row">
@@ -31,8 +31,8 @@
     </div>
 </div>
 </div>
-<?php include("../elements/footer.php");?>
+<?php include("/elements/footer.php");?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="../bootstrap3/js/bootstrap.min.js"></script>
+<script src="bootstrap3/js/bootstrap.min.js"></script>
 </body>
 </html>
