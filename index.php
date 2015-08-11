@@ -1,3 +1,10 @@
+<?php
+$rota = parse_url("http://".$_SERVER['HTTP-HOST'].$_SERVER['REQUEST_URI']);
+print_r($rota);
+$path = str_replace("/","",$rota['path']);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,9 +29,14 @@
     <?php require_once("elements/menu.php") ?>
     <div class="jumbotron">
         <h2 align="center">Home</h2>
-
-
     </div>
+
+    <div class="jumbotron">
+    <?php require_once($path.".php");?>
+    </div>
+
+
+
     <?php require_once("elements/footer.php") ?>
 </div>
 
