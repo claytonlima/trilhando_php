@@ -12,7 +12,7 @@ function rotas(){
     if (array_key_exists($path,$uri)) {
         return $uri[$path];
     } else {
-         return "erros/404.html";
+         return "erros/404.php";
     }
 
 }
