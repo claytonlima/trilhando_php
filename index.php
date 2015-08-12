@@ -1,5 +1,5 @@
 <?php
-include ("routas.php");
+include ("rotas.php");
 ?>
 
 <!DOCTYPE html>
@@ -24,9 +24,6 @@ include ("routas.php");
 <div class="container">
 
     <?php require_once("elements/menu.php") ?>
-    <div class="jumbotron">
-        <h2 align="center">Home</h2>
-    </div>
 
     <div>
         <?php include(rotas());?>
