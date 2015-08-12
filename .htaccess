@@ -4,4 +4,4 @@ RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^.*$ - [NC,L]
 RewriteRule ^.*$ index.php [NC,L]
-ErrorDocument 404 /erros/404.html
+#ErrorDocument 404 /erros/404.html
