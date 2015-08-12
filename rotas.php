@@ -4,6 +4,7 @@ function rotas(){
     $path = str_replace("/","",$rotas["path"]);
     $uri = array(
                 '' =>'views/home.php',
+                'home' => 'views/home.php',
                 'empresa'=>'views/empresa.php',
                 'produtos'=>'views/produtos.php',
                 'servicos'=>'views/servicos.php',
