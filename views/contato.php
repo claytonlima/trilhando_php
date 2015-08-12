@@ -14,9 +14,8 @@
     <![endif]-->
 </head>
 <body>
-<?php include("elements/menu.php");?>
 <div class="container">
-    <h2 class="form-signin-heading">Contato</h2>
+    </br>
     <div class="row">
         <fieldset>
             <legend style="display: block; padding-left: 2px; padding-right: 2px; border: none; text-align:center;">Contato</legend>
@@ -31,7 +30,6 @@
     </div>
 </div>
 </div>
-<?php include("elements/footer.php");?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="../bootstrap3/js/bootstrap.min.js"></script>
 </body>
