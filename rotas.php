@@ -7,9 +7,8 @@ function rotas(){
                 'empresa'=>'views/empresa.php',
                 'produtos'=>'views/produtos.php',
                 'servicos'=>'views/servicos.php',
-                'contato'=>'views/contato.php',
-                'mensagem_retorno'=>'mensagem_retorno.php'
-    );
+                'contato'=>'views/contato.php'
+                );
     var_dump($uri);
     if (array_key_exists($path,$uri)) {
         return $uri[$path];
