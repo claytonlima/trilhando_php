@@ -24,6 +24,9 @@ include ("rotas.php");
 <div class="container">
 
     <?php require_once("elements/menu.php") ?>
+    <div class="jumbotron">
+        <h2 align="center"></h2>
+    </div>
 
     <div>
         <?php include(rotas());?>
