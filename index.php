@@ -1,7 +1,6 @@
 <?php
 include ("rotas.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,21 +17,13 @@ include ("rotas.php");
     <![endif]-->
 </head>
 <body>
-
-
-
 <div class="container">
     <?php require_once("elements/menu.php") ?>
-
     <div>
         <?php include(rotas());?>
     </div>
-
-
-
     <?php require_once("elements/footer.php") ?>
 </div>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 <script src="bootstrap3/js/bootstrap.min.js"></script>
