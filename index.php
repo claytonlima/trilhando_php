@@ -4,7 +4,7 @@ include ("rotas.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="iso-8859-1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Trilhando o PHP</title>
@@ -18,11 +18,13 @@ include ("rotas.php");
 </head>
 <body>
 <div class="container">
-    <?php require_once("elements/menu.php") ?>
+        <?php require_once("elements/menu.php") ?>
     <div>
+        <?php $conteudo = conteudo();?>
+        <?php $page = paginaAtual();?>
         <?php include(rotas());?>
     </div>
-    <?php require_once("elements/footer.php") ?>
+        <?php require_once("elements/footer.php") ?>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
