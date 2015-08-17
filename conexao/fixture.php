@@ -21,8 +21,8 @@ echo " - OK\n";
 
 //    $nome ="Teste teste {$x}";
 
-//    $smt = $conn->prepare("INSERT INTO teste(nome) VALUE (:nome);");
-//    $smt->bindParam(":nome", $nome);
+    //    $smt = $conn->prepare("INSERT INTO teste(nome) VALUE (:nome);");
+    //    $smt->bindParam(":nome", $nome);
 //    $smt->execute();
 //}
 //echo " - OK\n";

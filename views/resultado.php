@@ -1,23 +1,24 @@
 <div class="jumbotron">
     <h3 align="center">Resultado de pesquisa</h3>
-    <?php
-    include "../conexao/conexao.php";
-
-    $conn = conexao();
-    echo "#### Pesquisa na tabela #### <br><br>";
-    $pesquisar = $_POST['pesquisar'];
-
-
-    $sql = ("SELECT nome FROM usuario where nome LIKE '%".$pesquisar."%'");
-    $stm = $conn->prepare($sql);
-    $stm->execute();
-    $resultado  = $stm->fetchAll();
-
-    foreach($resultado as $reg):
-        echo "Nome:" .$reg['nome']. "<br><br>";
-    endforeach;
-    ?>
 </div>
+
+<?php
+include "../conexao/conexao.php";
+
+$conn = conexao();
+$pesquisar = $_POST['pesquisar'];
+
+
+$consulta = $conn->prepare("SELECT pagina,link_pagina FROM paginas where conteudo LIKE :pesquisa");
+$pesquisar_sql = "%".$pesquisar."%";
+$consulta->bindValue(':pesquisa', $pesquisar_sql);
+$consulta->execute();
+
+foreach($consulta as $reg):
+echo '<td><a target="_blank" href="'.$reg['link_pagina'].'">'.$reg['pagina'].'</a></td><br>';
+endforeach;
+?>
+
 
 
 

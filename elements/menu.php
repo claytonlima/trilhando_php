@@ -8,7 +8,7 @@
     </ul>
     <form class="navbar-form pull-left" name="pesquisa_form" method="post" action="../views/resultado.php">
         <input type="text" class="span2" name="pesquisar">
-        <button type="submit" class="btn">Pesquisar<cle/button>
+        <button type="submit" class="btn">Pesquisar</button>
     </form>
 </nav>
 
