@@ -6,4 +6,9 @@
         <li><a href="/servicos">Serviços</a></li>
         <li><a href="/contato">Contato</a></li>
     </ul>
+    <form class="navbar-form pull-left">
+        <input type="text" class="span2">
+        <button type="submit" class="btn">Buscar</button>
+    </form>
 </nav>
+

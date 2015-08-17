@@ -1,15 +1,22 @@
 <?php
- try{
-     $conexao = new \PDO("mysql:host=localhost;dbname=codephp","root","850702");
-}catch (\PharException $e){
-     die("Erro código: ".$e->getCode().": ".$e->getMessage());
- }
+function conexao(){
+    try{
 
-$sql = "SELECT * from usuario";
-$stmt = $conexao->prepare($sql);
-$stmt->execute();
-$usuario = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $config = include "config.php";
 
-foreach($usuario as $usuarios){
-echo $usuarios['nome']." - ".$usuarios['email']."<br>";
+        if(!isset($config['db'])){
+            throw new \InvalidArgumentException("Configuração do banco de dados não encontrada");
+        }
+        $host = (isset($config['db']['host'])) ? $config['db']['host'] : null;
+        $dbname = (isset($config['db']['dbname'])) ? $config['db']['dbname'] : null;
+        $user = (isset($config['db']['user'])) ? $config['db']['user'] : null;
+        $password = (isset($config['db']['password'])) ? $config['db']['password'] : null;
+
+        return new \PDO("mysql:host={$host};dbname={$dbname}", $user ,$password);
+
+    }catch (\PDOException $e){
+        echo $e->getMessage()."\n";
+        echo $e->getTraceAsString()."/n";
+    }
+
 }
