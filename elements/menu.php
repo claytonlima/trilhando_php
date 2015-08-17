@@ -7,7 +7,7 @@
         <li><a href="/contato">Contato</a></li>
     </ul>
     <form class="navbar-form pull-left" name="pesquisa_form" method="post" action="../views/resultado.php">
-        <input type="text" class="span2" name="pesquisar">
+        <input type="text" class="span2" name="pesquisar" required>
         <button type="submit" class="btn">Pesquisar</button>
     </form>
 </nav>
