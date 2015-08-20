@@ -19,7 +19,7 @@ $conn->query(" CREATE TABLE pagina_teste(
 echo " - OK\n";
 
 echo "Inserindo os dados Página, Conteúdo e Link da página";
-for($x=0; $x<=9; $x++){
+for($x=0; $x<=5; $x++){
 
     $pagina ="home";
     $conteudo ="Veja esta pagina belissima";
