@@ -5,7 +5,7 @@ echo "#### Executando Fixture ####\n";
 $conn = conexao();
 
 echo "Removendo Tabela";
-$conn->query("DROP TABLE IF EXISTS conteudoteste;");
+$conn->query("DROP TABLE IF EXISTS pagina_teste;");
 echo " - OK\n";
 
 echo "Criando a Tabela";
@@ -22,7 +22,7 @@ echo "Inserindo os dados Página, Conteúdo e Link da página";
 for($x=0; $x<=9; $x++){
 
     $pagina ="home";
-    $conteudo ="Veja está página belissima";
+    $conteudo ="Veja esta pagina belissima";
     $link_pagina ="/home";
 
         $smt = $conn->prepare("INSERT INTO pagina_teste (pagina,conteudo,link_pagina) VALUES (:pagina,:conteudo,:link_pagina);");
