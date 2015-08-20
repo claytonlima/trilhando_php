@@ -1,12 +1,12 @@
 <?php
 require_once "conexao.php";
-echo "#### Executando Fixture ####\n";
+echo "#### Executando Fixture ####\n\n";
 
 $conn = conexao();
 
 echo "Removendo Tabela";
 $conn->query("DROP TABLE IF EXISTS pagina_teste;");
-echo " - OK\n";
+echo " - Remoção de tabela OK\n\n";
 
 echo "Criando a Tabela";
 $conn->query(" CREATE TABLE pagina_teste(
@@ -16,7 +16,7 @@ $conn->query(" CREATE TABLE pagina_teste(
           link_pagina  VARCHAR (45) CHARACTER SET 'utf8' NULL,
           PRIMARY KEY (id_pagina));
 ");
-echo " - OK\n";
+echo " - Tabela criada OK\n";
 
 echo "Inserindo os dados Página, Conteúdo e Link da página";
 for($x=0; $x<=5; $x++){
@@ -29,8 +29,21 @@ for($x=0; $x<=5; $x++){
         $smt->bindParam(":pagina", $pagina);
         $smt->bindParam(":conteudo", $conteudo);
         $smt->bindParam(":link_pagina", $link_pagina);
-    $smt->execute();
+        $smt->execute();
 }
-echo "#### Inserção concluída ####\n";
+echo " - Dados inseridos OK\n";
 
-echo "#### Concluído ####\n";
+echo "### Criação e Inserção na tabela concluída ###\n\n";
+
+echo "Fazendo Busca de conteúdo";
+
+        $pagina_busca = "%veja%";
+        $smt = $conn->prepare("SELECT conteudo from pagina_teste where conteudo LIKE :termo");
+        $smt->bindParam(":termo",$pagina_busca);
+        $smt->execute();
+
+echo " - Busca Concluída OK\n";
+echo "### Busca Concluída ###\n\n";
+
+
+echo "### Rotina de inserção e busca teste Concluida ###\n\n";
