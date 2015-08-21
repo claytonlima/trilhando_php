@@ -19,18 +19,33 @@ $conn->query(" CREATE TABLE pagina_teste(
 echo " - Tabela criada OK\n";
 
 echo "Inserindo os dados Página, Conteúdo e Link da página";
-for($x=0; $x<=5; $x++){
 
-    $pagina =['home','Empresa','servicos','produtos'];
-    $conteudo ="Veja esta pagina belissima";
-    $link_pagina ="/home";
+
+$cadastrados = 0;
+
+    $pagina = array();
+    $paginas[] =['pagina'=>'Home','conteudo'=>'Belissima Home','link_pagina'=>'\home'];
+    $paginas[] =['pagina'=>'Empresa','conteudo'=>'Otima Empresa','link_pagina'=>'\conteudo'];
+    $paginas[] =['pagina'=>'Produtos','conteudo'=>'Ótimos Produtos','link_pagina'=>'\Produtos'];
+    $paginas[] =['pagina'=>'Servicos','conteudo'=>'Ótimos Serviços','link_pagina'=>'\servicos'];
+    $paginas[] =['pagina'=>'Contato','conteudo'=>'Entre em Contato','link_pagina'=>'\contato'];
+
+    foreach ($paginas as $pagina) {
+
+        $pagina = $pagina['pagina'];
+        $conteudo = $pagina['conteudo'];
+        $link_pagina = $pagina['link_pagina'];
 
         $smt = $conn->prepare("INSERT INTO pagina_teste (pagina,conteudo,link_pagina) VALUES (:pagina,:conteudo,:link_pagina);");
         $smt->bindParam(":pagina", $pagina);
         $smt->bindParam(":conteudo", $conteudo);
         $smt->bindParam(":link_pagina", $link_pagina);
-        $smt->execute();
-}
+
+        if($smt->execute()){
+           $cadastrados ++;
+        }
+    }
+echo 'Usuários cadastrados: ' . $cadastrados;
 echo " - Dados inseridos OK\n";
 
 echo "### Criação e Inserção na tabela concluída ###\n\n";
