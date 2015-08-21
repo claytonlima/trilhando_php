@@ -21,7 +21,7 @@ echo " - Tabela criada OK\n";
 echo "Inserindo os dados Página, Conteúdo e Link da página";
 for($x=0; $x<=5; $x++){
 
-    $pagina ="home";
+    $pagina =['home','Empresa','servicos','produtos'];
     $conteudo ="Veja esta pagina belissima";
     $link_pagina ="/home";
 
