@@ -21,7 +21,7 @@ echo " - Tabela criada OK\n";
 echo "Inserindo os dados Página, Conteúdo e Link da página\n";
 
 
-$cadastrados = 0;
+ $cadastrados = 0;
 
 //    $paginas = array();
 //    $paginas[] =['pagina'=>'Home','conteudo'=>'Belissima Home','link_pagina'=>'\home'];
@@ -30,14 +30,13 @@ $cadastrados = 0;
 //    $paginas[] =['pagina'=>'Servicos','conteudo'=>'Ótimos Serviços','link_pagina'=>'\servicos'];
 //    $paginas[] =['pagina'=>'Contato','conteudo'=>'Entre em Contato','link_pagina'=>'\contato'];
 
-
     $paginas = array();
 
-    $paginas[] = array('pagina'=>'home', 'conteudo'=>'Belissima Home', 'link'=>'\home');
-    $paginas[] = array('pagina'=>'home', 'conteudo'=>'Otima Empresa', 'link'=>'\conteudo');
-    $paginas[] = array('pagina'=>'home', 'conteudo'=>'Otimos Produtos', 'link'=>'\Produtos');
-    $paginas[] = array('pagina'=>'home', 'conteudo'=>'Otimos Servicos', 'link'=>'\servicos');
-    $paginas[] = array('pagina'=>'home', 'conteudo'=>'Entre em Contato', 'link'=>'\contato');
+    $paginas[] = array('pagina'=>'Home', 'conteudo'=>'Belissima Home', 'link'=>'\home');
+    $paginas[] = array('pagina'=>'Empresa', 'conteudo'=>'Otima Empresa', 'link'=>'\conteudo');
+    $paginas[] = array('pagina'=>'Produtos', 'conteudo'=>'Otimos Produtos', 'link'=>'\Produtos');
+    $paginas[] = array('pagina'=>'Servicos', 'conteudo'=>'Otimos Servicos', 'link'=>'\servicos');
+    $paginas[] = array('pagina'=>'Contato', 'conteudo'=>'Entre em Contato', 'link'=>'\contato');
 
     foreach ($paginas as $pagina) {
 
@@ -49,14 +48,13 @@ $cadastrados = 0;
         $smt->bindParam(":pagina", $pg);
         $smt->bindParam(":conteudo", $ct);
         $smt->bindParam(":link_pagina", $lk);
-
         $smt->execute();
-        $cadastrados++;
-    }
-echo 'Páginas cadastradas: ' . $cadastrados;
+        $cadastrados ++;
+}
+echo "Paginas inseridas: $cadastrados";
 echo " - Dados inseridos OK\n";
 
-echo "### Criação e Inserção na tabela concluída ###\n\n";
+echo "### Criação e Inserção na tabela concluído ###\n\n";
 
 echo "Fazendo Busca de conteúdo";
 
