@@ -32,7 +32,7 @@
             <a class="navbar-brand" href="index.php">Bem-Vindo Administrador do site, agora só falta se Logar!)</a>
         </div>
     </nav>
-    </br>
+    </div>
     <div id="page-wrapper">
 
         <div class="container-fluid">
@@ -46,7 +46,7 @@
                                     <strong>Login</strong>
                                 </div>
                                 <div class="panel-body">
-                                    <form role="form" action="/session/valida_usuario.php" method="POST">
+                                    <form role="form" action="/conexao/valida_usuario.php" method="POST">
                                         <fieldset>
                                 </div>
                                 <div class="row">
@@ -79,7 +79,8 @@
                     </div>
                 </div>
            </div>
-            </div>
+        </div>
+
 </body>
 
 </html>

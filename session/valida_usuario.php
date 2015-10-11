@@ -6,9 +6,16 @@ $senha = $_POST['senha'];
 
 // faz a conexão com o banco de dados
 require_once "/conexao/conexao.php";
- mysql_select_db('site_estudos');
- $consulta="Select * from cadastro_usuario where nome='" . $_POST['nome'] . "' and senha='" . $_POST['senha'] . "'";
- $resultado=mysql_query($consulta);
+$conn = conexao();
+
+$smt->$conn->prepare("Select * from cadastro_usuario where nome=:nome and senha=:senha");
+var_dump($smt);
+die();
+$smt->bindParam(":nome",nome);
+$smt->bindParam(":senha",$senha);
+$smt->execute();
+
+$resultado=mysql_query($consulta);
  if (mysql_num_rows($resultado)>0) //se o nome e senha coincidirem a sessão é criada 
 {
 $_SESSION['nome']= $nome;
