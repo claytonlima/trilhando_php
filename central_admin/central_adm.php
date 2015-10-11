@@ -1,30 +1,3 @@
-<?php
-session_start(); 
-if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['senha']) == true)) { 
-  unset($_SESSION['nome']); 
-  unset($_SESSION['senha']); 
-  header('location:index.php'); } 
-  //$logado = $_SESSION['login']; 
-  echo '<a href="logout.php">Logout</a><br><br>';
-?>
-
-<?php
-
-     $conexao = mysql_connect('localhost','root','850702') or print (mysql_error());
-     mysql_select_db('site_estudos');
-     $query_cadastro_usuario = "SELECT * FROM cadastro_usuario"; 
-     $cadastro_usuario = mysql_query($query_cadastro_usuario) or die (mysql_error());
-     $row_cadastro_usuario = mysql_fetch_assoc($cadastro_usuario);
-     $totalRows_cadastro_usuario = mysql_num_rows ($cadastro_usuario);
-     if (!$conexao) {
-  echo "<br>Sua conexão com o banco de dados falhou<br>";
-}
-    else{
-        mysql_close($conexao);
-
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
