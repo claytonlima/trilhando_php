@@ -20,7 +20,7 @@ if($_COOKIE['nome'] !="" && $_COOKIE['senha'] !=""){
     $smt->bindParam(1, $_POST['nome'], PDO::PARAM_STR);
     $smt->bindParam(2, $_POST['senha'], PDO::PARAM_STR);
     $smt->execute();
-    $obj = $smt->fetchAll(PDO::FETCH_ASSOC);
+    $obj = $smt->fetch(PDO::FETCH_ASSOC);
 
 }else{
     echo "não deixe de preencher os campos";
