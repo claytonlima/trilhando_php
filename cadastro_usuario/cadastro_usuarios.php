@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
-    <title>Sign Up form - Bootsnipp.com</title>
+    <title>Cadastro de Usuários</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <style type="text/css">
@@ -14,20 +14,19 @@
 </head>
 <body>
 <div class="span3">
-    <h2>Sign Up</h2>
-    <form>
-    <label>First Name</label>
+    <h2>Cadastro</h2>
+    <form method="post" action="/conexao/cadastro_usuarios.php">
+    <label>Primeiro Nome</label>
     <input type="text" name="firstname" class="span3">
-    <label>Last Name</label>
+    <label>Último sobrenome</label>
     <input type="text" name="lastname" class="span3">
-    <label>Email Address</label>
+    <label>Email</label>
     <input type="email" name="email" class="span3">
-    <label>Username</label>
+    <label>Usuário</label>
     <input type="text" name="username" class="span3">
-    <label>Password</label>
+    <label>Senha</label>
     <input type="password" name="password" class="span3">
-    <label><input type="checkbox" name="terms"> I agree with the <a href="#">Terms and Conditions</a>.</label>
-    <input type="submit" value="Sign up" class="btn btn-primary pull-right">
+    <input type="submit" value="Salvar" class="btn btn-primary pull-right">
     <div class="clearfix"></div>
     </form>
 </div>
