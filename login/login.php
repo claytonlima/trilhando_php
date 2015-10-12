@@ -71,7 +71,7 @@
                                             <input type="submit" class="btn btn-lg btn-primary btn-block" value="Entrar">
                                         </div>
                                         <div>
-                                          <a href="/cadastro_usuario/cadastro_usuario.php" ><button id="login_register_btn" type="button" class="btn btn-link">Registre-se</button></a>
+                                          <a href="/cadastro_usuario/cadastro_usuarios.php" ><button id="login_register_btn" type="button" class="btn btn-link">Registre-se</button></a>
                                         </div>
                                     </div>
                                 </div>
