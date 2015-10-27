@@ -16,7 +16,7 @@ if($_COOKIE['nome'] !="" && $_COOKIE['senha'] !=""){
     // faz a conexão com o banco de dados
     $conn = conexao();
 
-    $smt = $conn->prepare("Select * from usuario where nome= ? and senha = ?");
+    $smt = $conn->prepare("Select * from usuario where usuario= ? and senha = ?");
     $smt->bindParam(1, $_POST['nome'], PDO::PARAM_STR);
     $smt->bindParam(2, $_POST['senha'], PDO::PARAM_STR);
     $smt->execute();
