@@ -3,5 +3,5 @@
 session_start();
 session_unset();
 session_destroy();
-header('location:index.php');
+header('location:../central_admin/home_dashboard.php');
 ?>

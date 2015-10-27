@@ -10,3 +10,20 @@ function listaUsuarios(){
     return $usuarios = $smt->fetchAll(PDO::FETCH_ASSOC);
 }
 
+function delete(){
+
+
+
+}
+
+function add(){
+
+
+}
+
+function alter(){
+
+
+
+}
+

@@ -30,7 +30,7 @@
     <div id="wrapper">
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.php">Bem-Vindo ao Sistema Jarvis, só falta se Logar :)</a>
+                <a class="navbar-brand" href="../login/login.php">Sistema Code PHP</a>
             </div>
         </nav>
 

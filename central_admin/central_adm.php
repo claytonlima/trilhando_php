@@ -49,7 +49,7 @@ if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['senha']) == true
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="central_adm.php">Sistema Code Education PHP</a>
+                <a class="navbar-brand" href="central_adm.php">Sistema Code PHP</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">

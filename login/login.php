@@ -29,7 +29,7 @@
 <div id="wrapper">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="navbar-header">
-            <a class="navbar-brand" href="index.php">Bem-Vindo Administrador do site, agora só falta se Logar!)</a>
+            <a class="navbar-brand" href="../login/login.php">Bem-Vindo faça o login para ter acesso a área administrativa!</a>
         </div>
     </nav>
     </div>
@@ -37,7 +37,7 @@
 
         <div class="container-fluid">
             <div class="row">
-
+                <br>
                 <div class="container" style="margin-top:40px">
                     <div class="row">
                         <div class="col-sm-6 col-md-4 col-md-offset-4">
