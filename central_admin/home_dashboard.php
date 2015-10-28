@@ -30,7 +30,7 @@
     <div id="wrapper">
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="navbar-header">
-                <a class="navbar-brand" href="../login/login.php">Sistema Code PHP</a>
+                <a class="navbar-brand" href="central_adm.php">Sistema Code PHP</a>
             </div>
         </nav>
 

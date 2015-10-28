@@ -20,15 +20,16 @@ if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['senha']) == true
     <meta name="author" content="">
 
     <title>Listagem de usuários</title>
-
-    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link href="../css/sb-admin.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
+    <link href="../css/plugins/morris.css" rel="stylesheet">
     <link href="../font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery-1.11.0.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/plugins/morris/raphael.min.js"></script>
+    <script src="../js/plugins/morris/morris.min.js"></script>
+    <script src="../js/plugins/morris/morris-data.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -63,7 +64,7 @@ if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['senha']) == true
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo ucfirst($_SESSION['nome']);?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">            
                         <li>
-                            <a href="logout.php"><i class="fa fa-fw fa-power-off"></i>Log Out</a>
+                            <a href="/logout/logout.php"><i class="fa fa-fw fa-power-off"></i>Log Out</a>
                         </li>
                     </ul>
                 </li>
