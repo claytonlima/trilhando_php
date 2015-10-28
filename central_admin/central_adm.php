@@ -3,7 +3,7 @@ session_start();
 if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['senha']) == true)) { 
   unset($_SESSION['nome']); 
   unset($_SESSION['senha']); 
-  header('location:home_dashboard.php'); }
+  header('location:../login/login.php'); }
   //$logado = $_SESSION['login']; 
   echo '<a href="logout.php">Logout</a><br><br>';
 ?>

@@ -1,3 +1,12 @@
+<?php
+session_start();
+if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['senha']) == true)) {
+    unset($_SESSION['nome']);
+    unset($_SESSION['senha']);
+    header('location:../login/login.php'); }
+//$logado = $_SESSION['login'];
+echo '<a href="logout.php">Logout</a><br><br>';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,7 +69,7 @@
     <div id="wrapper">
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="navbar-header">
-                <a class="navbar-brand" href="central_adm.php">Sistema Code PHP</a>
+                <a class="navbar-brand" href="../central_adm.php">Sistema Code PHP</a>
             </div>
         </nav>
 

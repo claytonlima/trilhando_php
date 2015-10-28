@@ -12,15 +12,12 @@
 <?php
         $id = $_GET['id'];
         $pagina = carregarPagina($id);
-    //        echo "<pre>";
-    //        var_dump($pagina);
-    //        die();
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -34,6 +31,7 @@
     <script src="../js/bootstrap-datetimepicker.min.js"></script>
     <script src="../js/jquery-1.11.0.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.5.4/standard/ckeditor.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -76,8 +74,8 @@
                 </li>
 
                 <li>
-                    <a href="javascript:;" data-toggle="collapse" data-target="#pagina"><i class="fa fa-fw fa-arrows-v"></i>Páginas<i class="fa fa-fw fa-caret-down"></i></a>
-                    <ul id="pagina" class="collapse">
+                    <a href="javascript:;" data-toggle="collapse" data-target="#menu_pagina"><i class="fa fa-fw fa-arrows-v"></i>Páginas<i class="fa fa-fw fa-caret-down"></i></a>
+                    <ul id="menu_pagina" class="collapse">
                         <li>
                             <a href="../paginas/cadastrar_pagina.php">Cadastrar Páginas</a>
                         </li>
@@ -113,7 +111,7 @@
                 </div>
             </div>
             <!-- /.row -->
-            <form class="form-horizontal" method="post" action="/conexao/cadastro_usuarios.php">
+            <form class="form-horizontal" method="post" action="/conexao/alterar_conteudo_pagina.php">
                 <fieldset>
 
                     <!-- Form Name -->
@@ -123,16 +121,24 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="textinput">ID da página</label>
                         <div class="col-md-5">
-                            <input id="textinput" name="id" type="text" class="form-control input-md" required="" value="<?php echo $pagina['id_pagina'] ?>">
-
+                            <input id="textinput" readonly="true" name="id_pagina" type="text" class="form-control input-md" required="" value="<?php echo $pagina['id_pagina'] ?>">
                         </div>
                     </div>
-
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinput">Link Página</label>
+                        <div class="col-md-5">
+                            <input id="textinput" readonly="true" name="link_pagina" type="text" class="form-control input-md" required="" value="<?php echo $pagina['link_pagina']?>">
+                        </div>
+                    </div>
                     <!-- Text input-->
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="textinput">Página</label>
                         <div class="col-md-5">
-                            <input id="textinput" name="lastname" type="text" class="form-control input-md" required="" value="<?php echo $pagina['pagina']?>">
+<!--                            <input id="textinput" name="pagina" type="text" class="form-control input-md" required="" value="--><?php //echo $pagina['pagina']?><!--">-->
+                            <textarea name="pagina" class='ckeditor'><?php echo $pagina['pagina']?></textarea>
+                            <script>
+                                CKEDITOR.replace("pagina");
+                            </script>
 
                         </div>
                     </div>
@@ -141,16 +147,11 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="textinput">Conteúdo</label>
                         <div class="col-md-5">
-                            <input id="textinput" name="conteudo" type="text" placeholder="Digite seu email" class="form-control input-md" required="" value="<?php echo $pagina['conteudo'] ?>">
-
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="textinput">Link Página</label>
-                        <div class="col-md-5">
-                            <input id="textinput" name="link_pagina" type="text" class="form-control input-md" required="" value="<?php echo $pagina['link_pagina']?>">
-
+<!--                            <input id="textinput" name="conteudo" type="text" placeholder="Digite seu email" class="form-control input-md" required="" value="--><?php //echo $pagina['conteudo'] ?><!--">-->
+                            <textarea name="conteudo"><?php echo $pagina['conteudo'] ?></textarea>
+                            <script>
+                            CKEDITOR.replace("conteudo");
+                            </script>
                         </div>
                     </div>
                     <div class="form-group">
