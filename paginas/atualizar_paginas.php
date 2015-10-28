@@ -7,7 +7,12 @@
 ////$logado = $_SESSION['login'];
 //echo '<a href="logout.php">Logout</a><br><br>';
 //?>
-
+<?php include "../conexao/conexao.php"; ?>
+<?php include "../conexao/carregar_pagina.php";?>
+<?php
+        $id = $_GET['id'];
+        $pagina = carregarPagina($id);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -156,12 +161,12 @@
                         </div>
                     </div>
                     <!-- File Button -->
-<!--                    <div class="form-group">-->
-<!--                        <label class="col-md-4 control-label" for="filebutton">Imagem</label>-->
-<!--                        <div class="col-md-4">-->
-<!--                            <input id="filebutton" name="filebutton" class="input-file" type="file">-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <!--                    <div class="form-group">-->
+                    <!--                        <label class="col-md-4 control-label" for="filebutton">Imagem</label>-->
+                    <!--                        <div class="col-md-4">-->
+                    <!--                            <input id="filebutton" name="filebutton" class="input-file" type="file">-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
 
                     <!-- Button -->
                     <div class="form-group">

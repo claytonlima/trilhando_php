@@ -3,17 +3,17 @@ session_start();
 if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['senha']) == true)) { 
   unset($_SESSION['nome']); 
   unset($_SESSION['senha']); 
-  header('location:index.php'); } 
-  echo '<a href="logout.php">Logout</a><br><br>';
+  header('location:index.php');
+}
 ?>
 <?php include "../conexao/conexao.php"; ?>
-<?php include "../conexao/listar_usuarios.php";?>
-<?php $usuarios = listaUsuarios();?>
+<?php include "../conexao/listar_paginas.php";?>
+<?php $paginas = listarPaginas();?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -127,14 +127,11 @@ if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['senha']) == true
             
              <thead>
                   <tr>
-                     <th>ID</th>
-                     <th>Username</th>
+                     <th>ID Página</th>
+                     <th>Página</th>
 <!--                     <th>Foto</th> -->
-                     <th>Nome</th>
-                     <th>Sobrenome</th>
-                     <th>Email</th>
-                     <th>Senha</th>
-<!--                     <th>Data de Nascimento</th>-->
+                     <th>Conteúdo</th>
+                     <th>Link página</th>
                      <th>Ação</th>
                      <th>Ação</th>
                   </tr>
@@ -142,18 +139,17 @@ if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['senha']) == true
         <tbody>    
 
         <?php
-           foreach ($usuarios as $usuarios): ?>
+           foreach ($paginas as $paginas): ?>
             <tr>
-               <td><?php echo $usuarios ['usuario_id'] ?></td>
-               <td><?php echo $usuarios ['usuario'] ?></td>
-<!--               <td><img class="img-rounded" src="http://localhost/projeto/--><?php //echo $row_cadastro_usuario ['foto']?><!--" width="70" height="70"/></td>-->
-               <td><?php echo $usuarios ['primeironome'] ?></td>
-               <td><?php echo $usuarios ['ultimonome'] ?></td>
-               <td><?php echo $usuarios ['email'] ?></td>
-               <td><?php echo $usuarios ['senha'] ?></td>
-<!--               <td>--><?php //echo date ("d-m-Y", strtotime ($row_cadastro_usuario ['data_nascimento'])) ?><!--</td>-->
-               <td><a href="atualizar.php?id=<?php echo $usuarios['usuario_id'];?>">Alterar</a></td>
-               <td><a href="excluir.php?id=<?php echo $usuarios['usuario_id'];?>" onclick="excluir_registro(event);">Excluir</a></td>
+               <td><?php echo $paginas['id_pagina'] ?></td>
+               <td><?php echo $paginas ['pagina'] ?></td>
+<!--            td><img class="img-rounded" src="http://localhost/projeto/--><?php //echo $row_cadastro_usuario ['foto']?><!--" width="70" height="70"/></td>-->
+               <td><?php echo $paginas ['conteudo'] ?></td>
+               <td><?php echo $paginas ['link_pagina'] ?></td>
+
+<!--           <td>--><?php //echo date ("d-m-Y", strtotime ($row_cadastro_usuario ['data_nascimento'])) ?><!--</td>-->
+               <td><a href="../paginas/atualizar_paginas.php?id=<?php echo $paginas['id_pagina'];?>">Alterar</a></td>
+               <td><a href="excluir.php?id=<?php echo $paginas['id_pagina'];?>" onclick="excluir_registro(event);">Excluir</a></td>
            </tr>
             <? endforeach; ?>
          </tbody>                

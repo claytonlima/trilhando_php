@@ -26,7 +26,37 @@
     <![endif]-->
 </head>
 <body>
+<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav side-nav">
+        <li>
+            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i>Usuário<i class="fa fa-fw fa-caret-down"></i></a>
+            <ul id="demo" class="collapse">
+                <li>
+                    <a href="../cadastro_usuario/cadastro_usuarios.php">Cadastrar Usuário</a>
+                </li>
 
+                <li>
+                    <a href="../cadastro_usuario/usuarios_cadastrados.php">Listagem de Usuário</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="javascript:;" data-toggle="collapse" data-target="#pagina"><i class="fa fa-fw fa-arrows-v"></i>Páginas<i class="fa fa-fw fa-caret-down"></i></a>
+            <ul id="pagina" class="collapse">
+                <li>
+                    <a href="../paginas/cadastrar_pagina.php">Cadastrar Páginas</a>
+                </li>
+                <li>
+                    <a href="../paginas/paginas_cadastradas.php">Listagem páginas</a>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+</div>
+<!-- /.navbar-collapse -->
     <div id="wrapper">
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="navbar-header">
