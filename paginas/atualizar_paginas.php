@@ -12,6 +12,9 @@
 <?php
         $id = $_GET['id'];
         $pagina = carregarPagina($id);
+    //        echo "<pre>";
+    //        var_dump($pagina);
+    //        die();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -104,7 +107,7 @@
                             <i class="fa fa-dashboard"></i>  <a href="../central_admin/central_adm.php">Site Code PHP</a>
                         </li>
                         <li class="active">
-                            <i class="fa fa-table"></i>Cadastrar Usuários
+                            <i class="fa fa-table"></i>&nbsp Alterar página
                         </li>
                     </ol>
                 </div>
@@ -114,61 +117,42 @@
                 <fieldset>
 
                     <!-- Form Name -->
-                    <legend>Cadastro de Usuários</legend>
+                    <legend>Alterar dados da Página</legend>
 
                     <!-- Text input-->
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="textinput">Nome</label>
+                        <label class="col-md-4 control-label" for="textinput">ID da página</label>
                         <div class="col-md-5">
-                            <input id="textinput" name="firstname" type="text" placeholder="Digite seu nome" class="form-control input-md" required="">
-
-                        </div>
-                    </div>
-
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="textinput">Sobrenome</label>
-                        <div class="col-md-5">
-                            <input id="textinput" name="lastname" type="text" placeholder="Digite seu sobrenome" class="form-control input-md" required="">
+                            <input id="textinput" name="id" type="text" class="form-control input-md" required="" value="<?php echo $pagina['id_pagina'] ?>">
 
                         </div>
                     </div>
 
                     <!-- Text input-->
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="textinput">Email</label>
+                        <label class="col-md-4 control-label" for="textinput">Página</label>
                         <div class="col-md-5">
-                            <input id="textinput" name="email" type="text" placeholder="Digite seu email" class="form-control input-md" required="">
+                            <input id="textinput" name="lastname" type="text" class="form-control input-md" required="" value="<?php echo $pagina['pagina']?>">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinput">Conteúdo</label>
+                        <div class="col-md-5">
+                            <input id="textinput" name="conteudo" type="text" placeholder="Digite seu email" class="form-control input-md" required="" value="<?php echo $pagina['conteudo'] ?>">
 
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="passwordinput">Username</label>
+                        <label class="col-md-4 control-label" for="textinput">Link Página</label>
                         <div class="col-md-5">
-                            <input id="username" name="username" type="text" placeholder="Digite um username" class="form-control input-md" required="">
+                            <input id="textinput" name="link_pagina" type="text" class="form-control input-md" required="" value="<?php echo $pagina['link_pagina']?>">
 
                         </div>
                     </div>
-
-
-                    <!-- Password input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="passwordinput">Senha</label>
-                        <div class="col-md-5">
-                            <input id="passwordinput" name="password" type="password" placeholder="Digite sua senha" class="form-control input-md" required="">
-
-                        </div>
-                    </div>
-                    <!-- File Button -->
-                    <!--                    <div class="form-group">-->
-                    <!--                        <label class="col-md-4 control-label" for="filebutton">Imagem</label>-->
-                    <!--                        <div class="col-md-4">-->
-                    <!--                            <input id="filebutton" name="filebutton" class="input-file" type="file">-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-
-                    <!-- Button -->
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="singlebutton"></label>
                         <div class="col-md-4">
