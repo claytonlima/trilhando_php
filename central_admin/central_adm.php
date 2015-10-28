@@ -79,14 +79,15 @@ if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['senha']) == true
                             </li>
                         </ul>
                     </li>
-                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i>Produtos<i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
+
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#pagina"><i class="fa fa-fw fa-arrows-v"></i>Páginas<i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="pagina" class="collapse">
                             <li>
-                                <a href="lista_produtos.php">Listagem de produtos</a>
+                                <a href="../paginas/cadastrar_pagina.php">Cadastrar Páginas</a>
                             </li>
                             <li>
-                                <a href="#">Dropdown Item</a>
+                                <a href="../paginas/paginas_cadastradas.php">Listagem páginas</a>
                             </li>
                         </ul>
                     </li>
