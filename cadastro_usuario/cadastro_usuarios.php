@@ -99,7 +99,7 @@
                             <i class="fa fa-dashboard"></i>  <a href="../central_admin/central_adm.php">Site Code PHP</a>
                         </li>
                         <li class="active">
-                            <i class="fa fa-table"></i>Cadastrar Usuários
+                            <i class="fa fa-table"></i>&nbsp;Cadastrar Usuários
                         </li>
                     </ol>
                 </div>

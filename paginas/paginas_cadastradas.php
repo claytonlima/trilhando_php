@@ -3,7 +3,7 @@ session_start();
 if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['senha']) == true)) { 
   unset($_SESSION['nome']); 
   unset($_SESSION['senha']); 
-  header('location:index.php');
+  header('location:../login/login.php');
 }
 ?>
 <?php include "../conexao/conexao.php"; ?>
@@ -117,7 +117,7 @@ if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['senha']) == true
                                 <i class="fa fa-dashboard"></i>  <a href="central_adm.php">Sistema Code PHP</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-table"></i>Listagem de Usuários
+                                <i class="fa fa-table"></i>&nbsp;Listagem de Páginas
                             </li>
                         </ol>
                     </div>

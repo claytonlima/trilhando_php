@@ -26,10 +26,7 @@ if($id_pagina != "" && $pagina != "" && $conteudo != "" && $link_pagina != "") {
 
 if($count > 0){
     header('location:../paginas/paginas_cadastradas.php');
-    echo "Produto alterado com sucesso";
 }else{
-    echo "Nenhuma foi alterada";
+    echo "Nenhuma alteracao foi efetuada";
 }
-
-
 }
