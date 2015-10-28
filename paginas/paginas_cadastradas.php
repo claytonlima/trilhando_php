@@ -110,7 +110,7 @@ if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['senha']) == true
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Usuário
+                            Paginas cadastradas
                         </h1>
                         <ol class="breadcrumb">
                             <li>

@@ -11,10 +11,10 @@ if($id_pagina != "" && $pagina != "" && $conteudo != "" && $link_pagina != "") {
     $conn = conexao();
     $smt = $conn->prepare(" UPDATE paginas SET pagina = :pagina , conteudo = :conteudo, link_pagina = :link_pagina WHERE id_pagina = :id");
 
-    $smt->bindParam(":id", $id_pagina);
-    $smt->bindParam(":pagina", $pagina);
-    $smt->bindParam(":conteudo", $conteudo);
-    $smt->bindParam(":link_pagina", $link_pagina);
+    $smt->bindParam(":id", addslashes($id_pagina));
+    $smt->bindParam(":pagina", addslashes($pagina));
+    $smt->bindParam(":conteudo", addslashes($conteudo));
+    $smt->bindParam(":link_pagina", addslashes($link_pagina));
     $smt->execute(array(
         ':id' => $id_pagina,
         ':pagina' => $pagina,

@@ -35,9 +35,9 @@ function conteudo(){
     $consulta->execute();
 
     while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
-    $titulo[strtolower($linha['pagina'])]['conteudo'] = $linha['conteudo'];
-    $titulo[strtolower($linha['pagina'])]['pagina'] = $linha['pagina'];
-
+        $titulo['conteudo'] = $linha['conteudo'];
+        $titulo['pagina'] = $linha['pagina'];
+        $titulo['link_pagina'] = $linha['link_pagina'];
     }
     return $titulo;
 }
