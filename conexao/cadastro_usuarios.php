@@ -36,14 +36,14 @@ if($primeiroNome != "" && $ultimoSobrenome != "" && $email != "" && $usuario != 
 
 if ($obj) //se o nome e senha coincidirem a sessão é criada
 {
-    $_SESSION['nome']= $_COOKIE['nome'];
-    $_SESSION['senha']= $_COOKIE['senha'];
+    echo "Por favor, não esqueça de preencher todos os campos!";
+    echo "<a href='/cadastro_usuario/cadastro_usuarios.php'><li>retornar a Tela de cadastro</li>";
 
-    header('location: /central_admin/central_adm.php');
 }
 else
 {
-    echo "Por favor, não esqueça de preencher todos os campos!";
-    echo "<a href='/cadastro_usuario/cadastro_usuarios.php'><li>retornar a Tela de cadastro</li>";
+    $_SESSION['nome']= $_COOKIE['nome'];
+    $_SESSION['senha']= $_COOKIE['senha'];
+    header('location: /central_admin/central_adm.php');
 }
 ?>

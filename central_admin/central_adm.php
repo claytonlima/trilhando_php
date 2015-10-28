@@ -71,7 +71,7 @@ if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['senha']) == true
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i>Usuário<i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="../views/cadastros_usuarios.php">Cadastrar Usuário</a>
+                                <a href="../cadastro_usuario/cadastro_usuarios.php">Cadastrar Usuário</a>
                             </li>
                             
                             <li>
