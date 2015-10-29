@@ -8,8 +8,7 @@ $primeiroNome = $_POST['firstname'];
 $ultimoSobrenome = $_POST['lastname'];
 $email = $_POST['email'];
 $usuario = $_POST['username'];
-$senha = $_POST['password'];
-
+$senha = password_hash($_POST['password'],PASSWORD_DEFAULT);
 
 if($primeiroNome != "" && $ultimoSobrenome != "" && $email != "" && $usuario != "" && $senha != ""){
     // faz a conexão com o banco de dados
