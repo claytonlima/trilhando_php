@@ -42,7 +42,7 @@ echo "Inserindo os dados Página, Conteúdo e Link da página\n";
 //        $pg = $pagina['pagina'];
 //        $ct = $pagina['conteudo'];
 //        $lk = $pagina['link'];
-$salt = ['salt'=>"tente descobrir a senha"];
+$salt = ['salt' => "tente descobrir a senha"];
 $usuario = "clayton";
 $senha =password_hash("clayton",PASSWORD_DEFAULT, $salt);
         $smt = $conn->prepare("INSERT INTO usuario_teste (usuario,senha) VALUES (:usuario,:senha);");
