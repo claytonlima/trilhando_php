@@ -7,28 +7,28 @@ session_start();
 require_once "conexao.php";
 $conn = conexao();
 $nome = $_POST['nome'];
-
 $senha = $_POST['senha'];
 
 $dados = array(':nome' => $nome);
-
-$smt = $conn->prepare("Select * from usuario");
+$smt = $conn->prepare("Select usuario,senha from usuario WHERE usuario = :nome");
 $smt->execute($dados);
-$senhas = $smt->fetchAll(PDO::FETCH_ASSOC);
-
-echo "<pre>";
-var_dump($senhas);
-die();
+$retornoUsuario = $smt->fetch(PDO::FETCH_ASSOC);
+$count = $smt->rowCount();
 
 
+If($count > 0){
 
-if(password_verify($senha,$senhas['senha']) && $nome == $senhas['usuario']){
-    $_COOKIE['nome']  = $nome;
-    $_COOKIE['senha']  = $senha;
-}else{
-    echo "Não Entrei no Login";
+    if(password_verify($senha,$retornoUsuario['senha'])){
+        $_COOKIE['nome']  = $nome;
+        $_COOKIE['senha']  = $senha;
+    }
+    else{
+        echo "Não Entrei no Login";
+    }
 }
-
+else{
+    echo "Tente novamente";
+}
 //if($_COOKIE['nome'] !="" && $_COOKIE['senha'] !=""){
 //    // faz a conexão com o banco de dados
 //
@@ -43,7 +43,7 @@ if(password_verify($senha,$senhas['senha']) && $nome == $senhas['usuario']){
 //    echo "não deixe de preencher os campos";
 //}
 //
-if ($senhas > 0) //se o nome e senha coincidirem a sessão é criada
+if ($count > 0) //se o nome e senha coincidirem a sessão é criada
 {
     $_SESSION['nome']= $_COOKIE['nome'];
     $_SESSION['senha']= $_COOKIE['senha'];
@@ -55,7 +55,7 @@ else //caso não coincida o usuário e senha, vai para a página de erro
     echo "<a href='/login/login.php'><li>retornar ao login</li>";
 }
 //if($_COOKIE['nome'] !="" && $_COOKIE['senha'] !=""){
-    // faz a conexão com o banco de dados
+// faz a conexão com o banco de dados
 //
 //
 //    $smt = $conn->prepare("Select * from usuario where usuario= ? and senha = ?");
