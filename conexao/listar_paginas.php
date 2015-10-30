@@ -1,4 +1,5 @@
 <?php
+
 function listarPaginas(){
     require_once "conexao.php";
     $conn = conexao();
@@ -8,4 +9,16 @@ function listarPaginas(){
     return $paginas = $smt->fetchAll(PDO::FETCH_ASSOC);
 }
 
+function del($id){
+    $conn = conexao();
+
+    $smt = $conn->prepare("DELETE * from paginas WHERE id_pagina = id_pagina");
+    $smt->bindParam(":id_pagina", $id);
+
+
+    if($smt->execute()){
+        return true;
+    }
+
+}
 
