@@ -30,12 +30,13 @@ $senha =password_hash("12345",PASSWORD_DEFAULT);
 $smt = $conn->prepare("INSERT INTO usuario_teste (usuario,senha,role) VALUES (:usuario,:senha,:role);");
 $smt->bindParam(":usuario", $usuario);
 $smt->bindParam(":senha", $senha);
-$smt->bindParam(":role", $senha);
+$smt->bindParam(":role", $role);
 $smt->execute();
 $cadastrados ++;
 //}
-echo "USUÁRIO criado no banco $usuario \n";
-echo "SENHA criada no banco $senha \n";
+echo "USUÁRIO criado no banco >> $usuario . \n";
+echo "SENHA criada no banco >> $senha . \n";
+echo "Tipo usuario criada no banco >> $role . \n";
 echo "Usuário cadastrado: $cadastrados";
 echo " - Dados inseridos OK \n";
 
