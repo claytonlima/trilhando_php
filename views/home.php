@@ -1,6 +1,6 @@
 <div class="jumbotron">
-    <h3 align="center"><?php echo $conteudo[$page]['pagina'];?></h3>
+    <?php echo $conteudo[$page]['pagina'];?>
 </div>
 <div class="jumbotron">
-    <h3 align="center"><?php echo $conteudo[$page]['conteudo'];?></h3>
+    <?php echo $conteudo[$page]['conteudo'];?>
 </div>

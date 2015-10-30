@@ -24,23 +24,26 @@ function rotas()
 }
 
 function paginaAtual(){
-    $path = str_replace("/", "", $_SERVER["REQUEST_URI"]);
+    $path = $_SERVER["REQUEST_URI"];
+
     return $path;
 }
 
 function conteudo(){
     $conn = conexao();
 
-    $consulta = $conn->prepare("SELECT pagina,link_pagina,conteudo FROM paginas");
+    $consulta = $conn->prepare("SELECT pagina,conteudo,link_pagina FROM paginas");
     $consulta->execute();
 
     while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
-        $titulo['conteudo'] = $linha['conteudo'];
-        $titulo['pagina'] = $linha['pagina'];
-        $titulo['link_pagina'] = $linha['link_pagina'];
+        $titulo[$linha['link_pagina']]['conteudo'] = strip_tags($linha['conteudo']);
+        $titulo[$linha['link_pagina']]['pagina'] = strip_tags($linha['pagina']);
     }
     return $titulo;
 }
+
+
+
 
 
 

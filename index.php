@@ -21,6 +21,7 @@ include ("rotas.php");
         <?php require_once("elements/menu.php") ?>
     <div>
         <?php $conteudo = conteudo();?>
+
         <?php $page = paginaAtual();?>
         <?php include(rotas());?>
     </div>
