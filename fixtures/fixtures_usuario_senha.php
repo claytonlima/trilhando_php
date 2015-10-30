@@ -42,7 +42,7 @@ $cadastrados = 0;
 //        $pg = $pagina['pagina'];
 //        $ct = $pagina['conteudo'];
 //        $lk = $pagina['link'];
-$usuario = password_hash("clayton",PASSWORD_DEFAULT);
+$usuario = "admin";
 $senha =password_hash("12345",PASSWORD_DEFAULT);
 $smt = $conn->prepare("INSERT INTO usuario_teste (usuario,senha) VALUES (:usuario,:senha);");
 $smt->bindParam(":usuario", $usuario);
