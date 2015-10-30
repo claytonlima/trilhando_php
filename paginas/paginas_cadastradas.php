@@ -149,7 +149,7 @@ if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['senha']) == true
 
 <!--           <td>--><?php //echo date ("d-m-Y", strtotime ($row_cadastro_usuario ['data_nascimento'])) ?><!--</td>-->
                <td><a href="../paginas/atualizar_paginas.php?id=<?php echo $paginas['id_pagina'];?>">Alterar</a></td>
-               <td><a href="listar_paginas.php?id=<?php echo $paginas['id_pagina']?>" onclick="excluir_registro(event);">Excluir</a></td>
+               <td><a href="../conexao/excluir_pagina.php?id=<?php echo $paginas['id_pagina']?>" onclick="excluir_registro(event);">Excluir</a></td>
            </tr>
             <? endforeach; ?>
          </tbody>                

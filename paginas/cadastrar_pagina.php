@@ -1,12 +1,13 @@
 <?php
-//session_start();
-//if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['senha']) == true)) {
-//    unset($_SESSION['nome']);
-//    unset($_SESSION['senha']);
-//    header('location:index.php'); }
-////$logado = $_SESSION['login'];
-//echo '<a href="logout.php">Logout</a><br><br>';
-//?>
+session_start();
+if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['senha']) == true)) {
+    unset($_SESSION['nome']);
+    unset($_SESSION['senha']);
+    header('location:../login/login.php');
+}
+//$logado = $_SESSION['login'];
+echo '<a href="logout.php">Logout</a><br><br>';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
